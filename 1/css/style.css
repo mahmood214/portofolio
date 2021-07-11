@@ -1,0 +1,435 @@
+:root {
+  --dark-primary: #00796b;
+  --default-primary: #009688;
+  --light-primary: #d4fbf6;
+}
+* {
+  font-family: "Amiri";
+  font-size: 1.15rem;
+  box-sizing: border-box;
+  line-height: 110%;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* strat header */
+body {
+  background-color: #acf8ef82;
+}
+
+body header {
+  border-radius: 60%/35% 0 0;
+  transition: ease-in-out 1s;
+}
+
+body header div.content {
+  text-transform: capitalize;
+  color: var(--dark-primary);
+  display: flex;
+  align-items: center;
+  margin-left: 0%;
+}
+
+body header h1 {
+  width: 40%;
+  text-align: center;
+  background-color: var(--dark-primary);
+  color: #f8f8f9;
+  margin: 0;
+  padding: 5%;
+  padding-left: 10%;
+  border-radius: 50%/30% 0;
+  transition: ease-in-out 1s;
+}
+
+body header h1:hover {
+  background-color: #f8f8f9;
+  color: var(--dark-primary);
+  transition: ease-in-out 1s;
+  cursor: default;
+}
+body header nav {
+  width: 60%;
+}
+
+body header nav ul {
+  display: flex;
+  align-items: center;
+  transition: all ease-in-out 1s;
+}
+body header nav li {
+  margin: 2%;
+  line-height: 120%;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+body header nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 0.5s;
+}
+body header nav a:hover,
+body header nav li.active a {
+  background-color: var(--dark-primary);
+  color: #f8f8f9;
+  padding: 1vw;
+  border-radius: 50%/20% 0;
+  transition: ease-in-out 0.5s;
+}
+/*  start header on scroll */
+body header.scroll {
+  transition: ease-in-out 1s;
+  opacity: 0.4;
+}
+body header.scroll nav {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  background-color: var(--light-primary);
+  top: 0%;
+  padding: 0 10%;
+  border-radius: 30%/20% 0;
+  transition: all ease-in-out 1s;
+}
+body header.scroll h1 {
+  opacity: 0;
+}
+body header.scroll:hover {
+  opacity: 1;
+}
+/*  end header on scroll*/
+/* end header */
+
+/* satrt content  */
+.container section {
+  margin: 10% 0;
+  background-color: var(--light-primary);
+  border-radius: 50%/10% 0;
+  padding: 7%;
+  transition: all ease-in-out 1s;
+}
+.container section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container section p {
+  background-color: var(--default-primary);
+  color: #f8f8f9;
+  line-height: 2;
+  padding: 10vw;
+  border-radius: 50%/30% 5%;
+  display: inline-block;
+  width: 60%;
+  font-size: 1.25rem;
+}
+.container section div div {
+  width: 40%;
+  height: 100%;
+  align-self: flex-start;
+  padding: 10%;
+  font-size: 11rem;
+  font-weight: bold;
+  font-family: "Amiri", serif;
+  color: whitesmoke;
+}
+.container section img {
+  width: 40%;
+  display: inline-block;
+  padding: 3%;
+}
+.container section h2 {
+  background-color: var(--dark-primary);
+  display: inline-block;
+  padding: 2%;
+  border-radius: 100%/30% 0;
+  color: #f8f8f9;
+}
+.container section h2:hover {
+  background-color: #f8f8f9;
+  color: var(--dark-primary);
+  transition: all ease-in-out 1s;
+  cursor: default;
+}
+/* start active section on scroll */
+.container section.active {
+  background-color: var(--dark-primary);
+  transition: all ease-in-out 1s;
+}
+/* end active section on scroll */
+/* end content */
+/* start footer */
+footer {
+  position: relative;
+}
+footer h3 {
+  text-align: center;
+  color: #f8f8f9;
+  padding: 10vh;
+  margin: 0;
+}
+footer p {
+  display: block;
+  text-align: center;
+  color: #f8f8f9;
+  padding: 2%;
+  padding-top: 0;
+  margin: 0;
+  padding-bottom: 5%;
+}
+footer p span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+footer svg {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: -1;
+}
+/* end footer */
+/* start to top button */
+
+div .to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  border: solid 7vw;
+  border-color: transparent transparent #0096876c;
+  transition: ease-in-out 1s;
+}
+div .to-top:hover {
+  transition: ease-in-out 0.5s;
+}
+div > span {
+  color: black;
+  position: fixed;
+  bottom: 3%;
+  right: 4%;
+  color: #f8f8f9;
+  font-weight: bold;
+  transition: all ease-in-out 0.5s;
+  z-index: 2;
+  font-size: 1.5vw;
+}
+div > span:hover {
+  cursor: pointer;
+}
+/* end to top button */
+.burger {
+  display: none;
+}
+/* start styling the scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f8f8f9;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--default-primary);
+  transition: all ease-in-out;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-primary);
+  transition: all ease-in-out 1s;
+}
+/* end styling the scroll bar */
+/* start styling what we most use */
+
+.content {
+  width: 80;
+  margin: 0 10%;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin: 0 5%;
+  font-size: 1.75rem;
+  transition: all ease-in-out 1s;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+/* end styling what we most use */
+/* start media quaries */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 0px) and (max-width: 991.98px) {
+  body header {
+    background-color: transparent;
+  }
+  .content {
+    width: 100;
+    margin: 0;
+  }
+  body header h1 {
+    width: 70%;
+  }
+  body header nav {
+    opacity: 0;
+    transition: all ease-in-out 1s;
+  }
+  body header nav.onclick {
+    opacity: 1;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--light-primary);
+    transition: all ease-in-out 1s;
+  }
+  body header nav.onclick ul {
+    display: block;
+    width: 100%;
+    transition: all ease-in-out 1s;
+  }
+  body header nav.onclick ul li {
+    display: block;
+    text-align: center;
+    margin: 3vw auto;
+    width: auto;
+    transition: all ease-in-out 1s;
+    width: 50%;
+  }
+  body header nav.onclick ul li a:hover {
+    padding: 4vw;
+  }
+  .container section {
+    margin: 10vw 0;
+    padding: 1vw;
+  }
+  .container section h2 {
+    margin: 15vw;
+    margin-bottom: 4vw;
+  }
+  .container section div {
+    display: block;
+  }
+  .container section p {
+    width: 100%;
+    padding: 20vw;
+  }
+  .container section div div {
+    width: 100%;
+    font-size: 4rem;
+  }
+  .container section img {
+    width: 40%;
+    display: block;
+    padding: 3%;
+  }
+  footer svg {
+    display: none;
+  }
+  footer {
+    padding: 3vw;
+    display: block;
+    background-color: var(--dark-primary);
+    border-radius: 60%/30% 0;
+  }
+  .burger {
+    display: inline-block;
+    width: 20vw;
+    padding: 2vw 0;
+    border-radius: 60%/30% 0;
+    background-color: var(--dark-primary);
+    position: fixed;
+    top: 3vh;
+    right: 1vw;
+    font-size: 10vw;
+    color: #f8f8f9;
+    font-weight: bolder;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all ease-in-out 1s;
+    cursor: pointer;
+  }
+  .burger.active {
+    background-color: #f8f8f9;
+    color: var(--dark-primary);
+    transform: rotate(360deg);
+    transition: all ease-in-out 1s;
+    cursor: pointer;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .content {
+    width: 100;
+    margin: 0;
+  }
+  body header {
+    background-color: transparent;
+  }
+  body header h1 {
+    width: 100%;
+  }
+  body header nav {
+    display: block;
+  }
+  body header nav ul {
+    align-items: center;
+    display: block;
+  }
+  body header nav li {
+    max-width: auto;
+    margin: 5%;
+  }
+
+  body header nav a:hover,
+  body header nav li.active a {
+    padding: 10%;
+  }
+
+  body header.scroll nav {
+    width: 60%;
+  }
+  body header.scroll h1 {
+    opacity: 0;
+  }
+  body header.scroll:hover {
+    opacity: 1;
+  }
+  .container section {
+    margin: 10vw 0;
+    padding: 1vw;
+  }
+  .container section h2 {
+    margin: 15vw;
+    margin-bottom: 4vw;
+  }
+  .container section div {
+    display: block;
+  }
+  .container section p {
+    width: 100%;
+    padding: 10vw;
+  }
+  .container section div div {
+    width: 100%;
+    font-size: 5rem;
+  }
+  .container section img {
+    width: 50%;
+    display: inline-block;
+  }
+  footer svg {
+    display: none;
+  }
+  footer {
+    padding: 3vw;
+    display: block;
+    background-color: var(--dark-primary);
+    border-radius: 60%/30% 0;
+  }
+}
+/* end media quaries */
