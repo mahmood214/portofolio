@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--requaired meta tags -->
+    <meta charset="UTF-8">
+    <!-- to make your website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- discribe what are in your page to help google(search engine find out what are they looking for) find-->
+    <meta name="description" content="list to do page papper ">
+    <!-- type in the content the most common key words that will be used in searching for your website separate between every word wtith comman ","-->
+    <meta name="keywords" content="to do list">
+    <!-- type your name you are the author-->
+    <meta name="author" content="mahmood elgohary elsayed">
+    <!-- the title of you website will be seen in the adress bar -->
+    <title>To Do List</title>
+    <link rel="stylesheet" href="../libraries/normaliz.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../libraries/font awesome.css">
+</head>
+
+<body>
+    <div>
+        <h1>to do list</h1>
+    </div>
+    <section class="container">
+        <section class="creat-task-container">
+            <input class="creat-task" type="text" placeholder="Type your task here">
+            <span class="add-task">+</span>
+            <div class="control">
+                <div class="complete-all ">done all</div>
+                <div class="delete-all ">delete all</div>
+            </div>
+            <div class="default-massage">no tasks yet</div>
+        </section>
+        <section class="created-task ">
+            <div class="the-task"></div>
+            <div class="control">
+                <span class="complete">done</span>
+                <span class="delete">delete</span>
+            </div>
+        </section>
+        <section class="info">
+            <div class="completed-tasks">
+                completed tasks: <span>0</span>
+            </div>
+            <div class="all-tasks">
+                all tasks: <span>0</span>
+            </div>
+        </section>
+        <div class="sweet-alert"><span></span>
+            <div class="ok"><span>ok</span></div>
+        </div>
+    </section>
+    <p>&copy; mahmood elgohary</p>
+    <!-- always link your js file at the end of the body tag  -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
