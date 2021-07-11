@@ -301,7 +301,7 @@ body > .skills {
 }
 .test > p {
   text-transform:none;
-  font-size: 2rem;
+  font-size: 0.8rem;
   display: flex;
   align-self: center;
 }
