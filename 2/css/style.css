@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.25rem;
+  font-family: fantasy;
+  background-image: url(../images/567798.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.intro,
+.end {
+  width: 100%;
+  height: 100%;
+  background-color: #c67f3fb3;
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+}
+.intro > h1,
+.end h1 {
+  color: #ffc107;
+  text-align: center;
+  padding: 2vw;
+}
+.intro > div {
+  position: relative;
+  width: 70%;
+  top: 50%;
+  left: 15%;
+  opacity: 0;
+  transition: all 2s;
+}
+.intro > div > input {
+  min-height: 80px;
+  border: 0.5vw solid #94271a;
+  border-radius: 5px;
+  padding: 1%;
+  width: 100%;
+  position: absolute;
+}
+.intro > div > input:focus {
+  outline: none;
+}
+.intro > div > span {
+  position: absolute;
+  left: 90%;
+  font-size: 1.5rem;
+  background-color: #94271a;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  min-width: 10%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro .start {
+  display: block;
+  padding: 2%;
+  top: 35%;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 1s;
+  position: absolute;
+  font-weight: bold;
+  background-color: #94271a;
+  color: hsl(45deg 100% 80%);
+}
+.intro .start:hover {
+  transition: all 1.25s;
+  font-weight: bolder;
+  background-color: hsl(45deg 100% 80%);
+  color: #94271a;
+}
+.userInformation {
+  overflow: hidden;
+  position: absolute;
+  padding: 0.5vw;
+  background-color: #70828f99;
+  margin: 0.5vw;
+  margin-right: 0;
+  margin-left: 1vw;
+  border-radius: 5px;
+  max-width: 24vw;
+}
+.userInformation > h1 {
+  color: #ffb53d;
+  text-align: center;
+  margin-bottom: 3vw;
+  padding-bottom: 1vw;
+  border-bottom-width: 1.4vw;
+  border-bottom-style: double;
+}
+.userInformation #userName {
+  background-color: #a87752;
+  padding: 1vw;
+  border-radius: 5px;
+  margin: 1vw;
+  color: #08223a;
+  font-weight: bold;
+}
+.userInformation #wrongTries {
+  padding: 1vw;
+  background-color: #a87752;
+  border-radius: 5px;
+  margin: 1vw;
+  color: #08223a;
+  font-weight: bold;
+}
+.userInformation #userName span {
+  color: #ffffff;
+  font-weight: bolder;
+}
+.userInformation #wrongTries span {
+  color: #ffffff;
+  font-weight: bolder;
+}
+.cardsContainer {
+  width: 75vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 25vw;
+}
+.freez {
+  pointer-events: none;
+}
+.cardsContainer .card {
+  flex-basis: 20%;
+  height: 31vh;
+  margin: 1vh 2.5%;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 1s;
+  border-radius: 20px;
+  border: double #ffc107 0.55vw;
+  background-image: url(../images/15978919-ancient-egyptian-hieroglyphics-on-the-wall.jpg);
+  background-size: 25%;
+  background-clip: padding-box;
+}
+.cardsContainer .card.flip {
+  transform: rotateY(180deg);
+}
+.cardsContainer .card.fliped {
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+.cardsContainer .card .front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+}
+.cardsContainer .card .front {
+  z-index: 2;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  background-image: url(../images/15978919-ancient-egyptian-hieroglyphics-on-the-wall.jpg);
+  background-size: cover;
+}
+.cardsContainer .card .back {
+  z-index: 1;
+}
+.cardsContainer .card .back img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.end {
+  display: none;
+  opacity: 0;
+  transition: all 5s;
+}
+.end.show {
+  display: block;
+}
+.end div {
+  top: 20%;
+  cursor: pointer;
+  background-color: #94271a;
+  color: hsl(45deg 100% 80%);
+  position: relative;
+  text-align: center;
+}
+.end > div > span {
+  left: 40%;
+  font-size: 1.5rem;
+  background-color: #febf06;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #94271a;
+  display: inline-block;
+  padding: 1vw;
+  margin: 1vw;
+  font-weight: bolder;
+  transition: all 1s;
+}
+.end > div > h1 > span {
+  color: whitesmoke;
+}
+.end > div > span:hover {
+  background-color: #94271a;
+
+  color: #febf06;
+}
+body > p {
+  color: #ffb53d;
+  position: absolute;
+  bottom: 0vh;
+  margin: 2vh;
+  margin-left: 3.5vw;
+  font-size: 1rem;
+}
