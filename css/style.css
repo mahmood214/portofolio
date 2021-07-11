@@ -300,8 +300,8 @@ body > .skills {
   margin-left: 0.5vw;
 }
 .test > p {
-  text-transform: none;
-  font-size: 0.8rem;
+  text-transform:none;
+  font-size: 2rem;
   display: flex;
   align-self: center;
 }
